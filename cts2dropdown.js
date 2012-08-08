@@ -1,5 +1,5 @@
 var Cts2DropdownConfig = {
-    serviceUrl: "http://localhost:8080/webapp/"
+    serviceUrl: "http://informatics.mayo.edu/cts2/services/phinvads/"
 };
   
 String.prototype.trim=function(){return this.replace(/^\s\s*/, '').replace(/\s\s*$/, '');};
