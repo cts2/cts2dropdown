@@ -4,16 +4,30 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://raw.github.com/cts2/cts2dropdown/master/cts2dropdown.js"></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 
+<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$("a.iframe").fancybox({
+		 'type':'iframe',
+		 'width': 900, //or whatever you want
+		 'height': 1200
+		});
+
+});
+
+</script>
     <title>CTS2 Dropdown</title>
   </head>
 
@@ -52,7 +66,10 @@ Add a <code>cts2-valueset</code> class to your <code>&lt;select&gt;</code> dropd
 &lt;select class=&quot;cts2-valueset(name : PHVS_DwellingType_NND)&quot;&gt;&lt;/select&gt;
 
 &lt;select class=&quot;cts2-valueset(name : PHVS_GeographicLocationHistory_CDC)&quot;&gt;&lt;/select&gt;
+
 </pre>
+
+<a class="iframe" href="EMRVS.html">View a Demo</a>
 
    </section>
 

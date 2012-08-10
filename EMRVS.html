@@ -1,0 +1,134 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <script type="text/javascript" src="https://raw.github.com/cts2/cts2dropdown/master/cts2dropdown.js"></script>
+        <title>Adaptive Devices Screening</title>
+        <style type="text/css">
+    body
+    {
+        background-color:#FFFBDF;
+        width:600px;
+        height:800px;
+    }
+    
+    p.main {text-align:justify;}
+    body{font-family:"MONACO"; sans-serif;}
+    .button
+{
+font-family: MONACO; 
+font-size: 12px; 
+font-weight: normal; 
+color: black;
+width:100px
+}
+
+.fieldset1 {font-weight: bold;  width:12%; text-align:center; margin-top: -1em; background-color:#FFFBDF;}
+.fieldset2 {font-weight: bold;  width:15%; text-align:center; margin-top: -1em; background-color:#FFFBDF;}
+
+.comboStyle {min-width:200px}
+
+        </style>
+    </head>
+
+    <body>
+        <table title="main">
+            <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+        <table title="Visual">
+            <caption class="fieldset1">Patient</caption>
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>Account Type<sup>*</sup>:</td>
+                            <td><select name="visualDeficitSelect" class="comboStyle cts2-valueset(name : PHVS_PatientClass_HL7_2x)">
+                                  
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="normal">Comment:</p></td>
+                            <td><input name="visualDeficitText" size="100" /></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Patient<sup>*</sup>:</td>
+                            <td><select name="visualDevicesSelect" class="comboStyle cts2-valueset(name : PHVS_PatientLocationStatusAtSpecimenCollection)">
+                                   
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Comment:</td>
+                            <td><input name="visualDevicesText" size="100" /></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                    <table title="Auditory">
+                        <caption class="fieldset2">Auditory</caption>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>Hearing Loss Risk Factor<sup>*</sup>:</td>
+                                        <td><select name="auditoryDeficitSelect" class="comboStyle cts2-valueset(name : PHVS_HearingLossRiskFactors_JCIH_EHDI)">
+                                         
+                                        </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comment:</td>
+                                        <td><input name="auditoryDeficitText" size="100" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hearing Loss Referral<sup>*</sup>:</td>
+                                        <td><select name="auditoryDevicesSelect" class="comboStyle cts2-valueset(name : PHVS_NewbornHearingLossReferrals_JCIH_EHDI)">
+                                          
+                                        </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Comment:</td>
+                                        <td><input name="auditoryDevicesText" size="100" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table> 
+                    </fieldset>
+                </td>
+            </tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr align="right">
+                <td colspan="2"><button name="saveBurron" class="button">Save</button>&nbsp;<button name="cancelButton" class="button">Cancel</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
