@@ -14,17 +14,26 @@ var init = function() {
 					var options = optionString.split(';');
 					
 					var valueSetName;
+					var max;
+					
 					for(var j in options){
 						var tokens = options[j].split(':')
 						var optionName = tokens[0].trim();
 						if(optionName == "name"){
 							valueSetName = tokens[1].trim();
+						} else if(optionName == "max"){
+							max = tokens[1].trim();
 						}
 					}
 			
 					var $select = $(this);
 					
-					var url = Cts2DropdownConfig.serviceUrl + "/valueset/${valueSetName}/resolution?format=json&callback=?";
+					var maxToReturnString = "";
+					if(max){
+						maxToReturnString = "&maxtoreturn=" + max;
+					}
+					
+					var url = Cts2DropdownConfig.serviceUrl + "/valueset/${valueSetName}/resolution?format=json"+maxToReturnString+"&callback=?";
 					$.getJSON(url.replace("${valueSetName}", valueSetName), function(data) {
 						
 						for(var i in data.iteratableResolvedValueSet.entryList) {
